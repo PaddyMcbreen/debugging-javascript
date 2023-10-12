@@ -11,10 +11,12 @@ function harrisonsComparisons(money, product) {
     "500 Piece, Rare Bottle Cap Collection": 1,
   };
 
-  if (money <= carBootPrices[product]) {
+  if (money >= carBootPrices[product]) {
     return `Harrison can buy ${product}!`;
+  } else {
+    return `Harrison can not buy ${product} :(`;
   }
-  return `Harrison can not buy ${product} :(`;
+  
 }
 
 // Please do not change code below this line

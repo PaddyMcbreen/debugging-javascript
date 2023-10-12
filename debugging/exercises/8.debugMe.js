@@ -4,8 +4,11 @@ const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 function returnLastDigit(num) {
   const digitStr = String(num);
-  return digitStr[digitStr.length - 1];
+  const lastDigetStr = digitStr[digitStr.length - 1];
+const lastDiget = parseInt(lastDigetStr)
+  return lastDiget;
 }
+
 
 // Please do not change code below this line
 

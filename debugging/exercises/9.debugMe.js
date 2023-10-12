@@ -2,8 +2,10 @@ const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 // Fix the function below to pass the test!
 
-function addNumbers(num1, num2) {
-  return Number(num1 + num2);
+function addNumbers(a, b) {
+  const aStr = parseInt(a)
+  const bStr = parseInt(b)
+  return aStr + bStr
 }
 
 // Please do not change code below this line

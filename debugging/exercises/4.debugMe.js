@@ -8,8 +8,8 @@ function accessObject(mentor) {
     Hannah: "Sunflower",
     Lewis: "Cactus",
     Harrison: "Venus Fly Trap",
-  };
-  return plants.mentor;
+  }
+  return plants[mentor];
 }
 
 // Please do not change code below this line

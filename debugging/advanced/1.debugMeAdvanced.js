@@ -1,8 +1,8 @@
 const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 function shoutNames(names) {
-  const shoutedNames = names.forEach((name) => {
-    return word + "!";
+  const shoutedNames = names.map((name) => {
+    return name + "!";
   });
   return shoutedNames;
 }
@@ -13,12 +13,16 @@ runTest(
     check(shoutNames([])).isEqualTo([]);
   }
 );
+
+
 runTest(
   'shoutNames should return an array of one name with "!" on the end',
   function () {
     check(shoutNames(["Harrison"])).isEqualTo(["Harrison!"]);
   }
 );
+
+
 runTest(
   'shoutNames should return an array of names with "!" on the end',
   function () {

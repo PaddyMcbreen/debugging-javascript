@@ -2,11 +2,13 @@ const { check, runTest, skipTest } = require("../../test-api/index.js");
 
 function capitalArtists(arr) {
   const artists = arr.map((pair) => {
-    return pair.split("-");
+    const [artist, _] = pair.split(" - ");
+    return artist.toUpperCase();
   });
 
   return artists;
 }
+
 
 runTest("An empty array should return an empty array", function () {
   check(capitalArtists([])).isEqualTo([]);
